@@ -35,15 +35,4 @@ test('data-driven test', async ({ request }) => {
     const body = JSON.parse(await getUrl.text());
     expect(await body.id).toEqual(qqq[i]);
     }
-// }
-    
-    // const getUrl = await request.get('/posts', {
-    //         params: {
-    //             id: qqq,
-    //             // skip: 1,
-    //             select: "title"
-    //         }
-    // });
-
-    // console.log(getUrl.json());
 })

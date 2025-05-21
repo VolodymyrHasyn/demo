@@ -21,7 +21,7 @@ test('API post method test', async ({ request }) => {
 });
 
 test('data-driven test', async ({ request }) => {
-    try{
+    // try{
     const qqq = [1,2];
     for (let i = 0; i < qqq.length; i++) {
         const getUrl = await request.get(`/posts?id=${qqq[i]}`, {
@@ -35,7 +35,7 @@ test('data-driven test', async ({ request }) => {
     const body = JSON.parse(await getUrl.text());
     expect(await body.id).toEqual(qqq[i]);
     }
-}
+// }
     
     // const getUrl = await request.get('/posts', {
     //         params: {
